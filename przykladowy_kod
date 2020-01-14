@@ -1,0 +1,4 @@
+pm.test("Uzytkownik o id = " + data.id + " to " + data.name, function (){
+    var jsonData = pm.response.json();
+    pm.expect(jsonData[data.id].name).to.eql(data.name);
+});
